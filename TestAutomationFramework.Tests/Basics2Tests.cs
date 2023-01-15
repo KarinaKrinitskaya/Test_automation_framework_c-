@@ -28,8 +28,13 @@ namespace TestAutomationFramework.Tests
             mainPage.SearchHeaderInput.SendKeys("Automation");
             mainPage.HeaderSearchFindButton.Click();
             Assert.That(BrowserFactory.Browser.Url, Is.EqualTo(PageURLs.SearchAutomation), "Search doesn't work!");
-            bool isContains = BrowserFactory.Browser.Url.Contains("Automation");
-            Assert.IsTrue(isContains, "Text was not found");
+            var first5Items = mainPage.HeaderSearchResultItems.GetElements().Take(5);
+            var actualRes = first5Items.Select(x => x.GetText());
+
+            foreach(var item in actualRes)
+            {
+                Assert.That(item.Contains("Automation", StringComparison.OrdinalIgnoreCase), "Text was not found");
+            }
         }
 
         [Test]
