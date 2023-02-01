@@ -14,7 +14,7 @@
         public static readonly string HeaderSearchUIDiv = "//*[@class='header-search-ui header__control']";
         public static readonly string HeaderSearchFrequentItem2 = "//li[@class='frequent-searches__item'][2]";
         public static readonly string HeaderSearchFindButton = "//form[@action='/search']/child::button[@class='header-search__submit']";
-        public static readonly string HeaderSearchResultsItems = "//article[@class='search-results__item']";
+        public static readonly string  HeaderSearchResultsItems = "//article[@class='search-results__item']";
         public static readonly string SearchResultFooter = "//*[@class='search-results__footer']";
 
         public static readonly string CareesTabsTitle = "//*[@class='tabs__title' and contains(@role,'presentation')]";

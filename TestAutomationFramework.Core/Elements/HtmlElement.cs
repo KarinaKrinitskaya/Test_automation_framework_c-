@@ -9,7 +9,7 @@ namespace TestAutomationFramework.Elements
 {
     public class HtmlElement : BaseElement
     {
-        public HtmlElement(By locator) : base(locator)
+        public HtmlElement(By locator, bool ensureDisplayed = true) : base(locator, ensureDisplayed)
         {
 
         }

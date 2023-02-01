@@ -102,7 +102,7 @@ namespace TestAutomationFramework.Core.Browser
         public void WaitForPageLoad() => Waiters().Until(condition => ExecuteScript("return document.readyState").Equals("complete"));
 
 
-        public IWebElement FindElement(By locator)//extra exeption for waiting
+        public IWebElement FindElement(By locator, bool checkIsDisplayed = true)//extra exeption for waiting
         {
             Logger.Info($"Searching for element{locator.ToString()}");
             //return Waiters().Until(c => _driver.FindElement(locator));
@@ -112,7 +112,19 @@ namespace TestAutomationFramework.Core.Browser
                 try
                 {
                     elem = _driver.FindElement(locator);
-                    return elem != null && elem.Displayed && elem.Enabled ? elem : null;
+                    if (elem != null)
+                    {
+                        Logger.Info(locator.ToString());
+                        Logger.Info(elem.Displayed.ToString());
+                        Logger.Info(elem.Enabled.ToString());
+                    }
+                    if (checkIsDisplayed)
+                        return elem != null && elem.Displayed && elem.Enabled ? elem : null;
+                    else
+                    {
+                        Logger.Info("HERE WE ARE)");
+                        return elem != null && elem.Enabled ? elem : null;
+                    }
                 }
                 catch (Exception)
                 {

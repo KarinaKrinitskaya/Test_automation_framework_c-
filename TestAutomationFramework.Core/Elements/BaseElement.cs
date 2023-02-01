@@ -10,18 +10,22 @@ namespace TestAutomationFramework.Elements
 {
     public abstract class BaseElement : IBaseElement
     {
+        private string text;
+
         protected readonly IWebElement element;
 
         public By Locator { get; private set; }
 
-        protected BaseElement(By locator)
+        protected BaseElement(By locator, bool ensureDisplayed = true)
         {
             Locator = locator;
-            element = BrowserFactory.Browser.FindElement(locator);
+            element = BrowserFactory.Browser.FindElement(locator, ensureDisplayed);
+            text = element.Text;
         }
         protected BaseElement(IWebElement element)
         {
             this.element = element;
+            text = element.Text;
         }
 
         public string GetText() => element.Text.Trim();
