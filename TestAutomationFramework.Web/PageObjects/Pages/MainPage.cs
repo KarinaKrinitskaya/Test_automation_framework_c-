@@ -19,6 +19,8 @@ namespace TestAutomationFramework.Web.PageObjects.Pages
 
         public Link CareerJobListingsLink => new Link(By.XPath(MainPageLocators.CareerJobListingsLink));
 
+        public Link ServicesLink => new Link(By.CssSelector(MainPageLocators.ServicesLink));
+
         public Button CareerLocationSelectorButton => new Button(By.XPath(MainPageLocators.CareerLocationSelectorButton));
 
         public ElementsList<HtmlElement> CareerLocationSelectorItems => new ElementsList<HtmlElement>(By.XPath(MainPageLocators.CareerLocationSelectorItem));

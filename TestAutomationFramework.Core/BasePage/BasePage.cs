@@ -2,7 +2,6 @@
 using TestAutomationFramework.Core.Browser;
 using OpenQA.Selenium;
 using System.ComponentModel;
-using TestAutomationFramework.Utilities;
 
 namespace TestAutomationFramework.Core.BasePage
 {

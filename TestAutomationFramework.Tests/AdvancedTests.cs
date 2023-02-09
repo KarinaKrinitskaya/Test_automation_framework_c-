@@ -7,7 +7,7 @@ namespace TestAutomationFramework.Tests
     public class AdvancedTests : BaseTest
     {
         [Test]
-        public void CheckCareersMenuJoinOurTeam() //using IJavaScriptExecutor here!
+        public void CheckCareersMenuJoinOurTeam() //using IJavaScriptExecutor here
         {
             mainPage.Load();
             mainPage.CareersLink.MouseHover();

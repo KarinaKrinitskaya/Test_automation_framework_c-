@@ -11,5 +11,6 @@
 
         public static readonly string SearchAutomation = "https://www.epam.com/search?q=Automation";
         public static readonly string SearchBusinessAnalysis = "https://www.epam.com/search?q=Business+Analysis";
+        public static readonly string Services = "https://www.epam.com/services";
     }
 }

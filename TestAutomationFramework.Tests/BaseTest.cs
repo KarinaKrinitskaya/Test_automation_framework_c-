@@ -4,23 +4,17 @@ namespace TestAutomationFramework.Tests
 {
     public abstract class BaseTest
     {
-        protected MainPage mainPage;
-        protected CareersPage careersPage;
-        protected HowWeDoItPage howWeDoItPage;
-        protected OurWorkPage ourWorkPage;
-        protected CareersLocationsPage careersLocationsPage;
+        public MainPage mainPage = new MainPage();
+        protected CareersPage careersPage = new CareersPage();
+        protected HowWeDoItPage howWeDoItPage = new HowWeDoItPage();
+        protected OurWorkPage ourWorkPage = new OurWorkPage();
+        protected CareersLocationsPage careersLocationsPage = new CareersLocationsPage();
 
         [OneTimeSetUp]
         public void OneTimeSetUp()
         {
             TestSettings.TestContext = TestContext.CurrentContext;
-            Logger.Initialize();
-
-            mainPage = new MainPage();
-            careersPage = new CareersPage();
-            howWeDoItPage = new HowWeDoItPage();
-            ourWorkPage = new OurWorkPage();
-            careersLocationsPage = new CareersLocationsPage();
+            Logger.Initialize(TestSettings.LogsPath);
         }
 
         [SetUp]
