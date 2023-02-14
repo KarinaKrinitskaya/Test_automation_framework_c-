@@ -18,6 +18,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		epam.chrome.runsettings = epam.chrome.runsettings
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAutomationFramework.API", "TestAutomationFramework.API\TestAutomationFramework.API.csproj", "{A9DC04F5-46E6-4043-9247-929883178246}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAutomationFramework.API.Tests", "TestAutomationFramework.API.Tests\TestAutomationFramework.API.Tests.csproj", "{AB64DD4B-DE5C-4201-800B-341633C8D15D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +48,14 @@ Global
 		{0C68168E-2F43-4F24-AD9A-F8B6B686C18D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C68168E-2F43-4F24-AD9A-F8B6B686C18D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C68168E-2F43-4F24-AD9A-F8B6B686C18D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9DC04F5-46E6-4043-9247-929883178246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9DC04F5-46E6-4043-9247-929883178246}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9DC04F5-46E6-4043-9247-929883178246}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9DC04F5-46E6-4043-9247-929883178246}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB64DD4B-DE5C-4201-800B-341633C8D15D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB64DD4B-DE5C-4201-800B-341633C8D15D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB64DD4B-DE5C-4201-800B-341633C8D15D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB64DD4B-DE5C-4201-800B-341633C8D15D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
